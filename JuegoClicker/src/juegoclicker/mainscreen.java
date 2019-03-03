@@ -21,7 +21,7 @@ public class mainscreen extends javax.swing.JPanel {
                         jLabel3.setText("Porimas");
                         jButton2.setText("¡Obtener Porimas!");
                         jButton1.setVisible(false);
-                        jButton1.setText("Mejorar colector");
+                        jButton1.setText("Mejorar colector: "+costejB1);
                         
     }
 
@@ -103,6 +103,7 @@ public class mainscreen extends javax.swing.JPanel {
                 jButton1.setVisible(false);
                 jButton1.setEnabled(false);
             }
+            jButton1.setText("Mejorar colector: "+costejB1);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -115,7 +116,12 @@ public class mainscreen extends javax.swing.JPanel {
         }
         else {
             System.out.println("Porimas insuficientes");
-        }     
+        }
+        if(i <costejB1) {
+            jButton1.setVisible(false);
+            jButton1.setEnabled(false);
+        }
+        jButton1.setText("Mejorar colector: "+costejB1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
