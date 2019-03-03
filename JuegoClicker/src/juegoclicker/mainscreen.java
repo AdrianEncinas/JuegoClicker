@@ -13,7 +13,7 @@ public class mainscreen extends javax.swing.JPanel {
             newFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 newFrame.pack();
                     newFrame.setVisible(true);
-                        newFrame.setTitle("Porro clicker");
+                        newFrame.setTitle("Juego Clicker");
                         jLabel2.setText(i + "");
     }
 
