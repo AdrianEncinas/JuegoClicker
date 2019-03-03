@@ -7,6 +7,7 @@ public class mainscreen extends javax.swing.JPanel {
     JFrame newFrame = new JFrame();
     int i = 0;
     int j = 1;
+    int costejB1 = 10;
 
     public mainscreen() {
         initComponents();
@@ -93,7 +94,7 @@ public class mainscreen extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         i = i+j;
         jLabel2.setText(i+ "");
-            if(i >= 10){
+            if(i >= costejB1){
                 System.out.println("Prueba");
                 jButton1.setVisible(true);
                 jButton1.setEnabled(true);
@@ -106,9 +107,10 @@ public class mainscreen extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(i >=10) {
+        if(i >=costejB1) {
         i = i-10;
         j = j+1;
+        costejB1 = costejB1 + 1;
         jLabel2.setText(i+ "");
         }
         else {
