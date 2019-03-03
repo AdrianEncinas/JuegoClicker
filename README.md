@@ -1,0 +1,2 @@
+# JuegoClicker
+Prototipo de clicker.
