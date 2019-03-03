@@ -5,7 +5,8 @@ import java.awt.BorderLayout;
 
 public class mainscreen extends javax.swing.JPanel {
     JFrame newFrame = new JFrame();
-    int i = 0;
+    double i = 0;
+    double j = 1;
 
     public mainscreen() {
         initComponents();
@@ -46,7 +47,6 @@ public class mainscreen extends javax.swing.JPanel {
         jLabel3.setText("jLabel3");
 
         jButton1.setText("jButton3");
-        jButton1.setActionCommand("jButton3");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -62,7 +62,7 @@ public class mainscreen extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1))
                     .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
@@ -90,9 +90,9 @@ public class mainscreen extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        i++;
+        i = i+j;
         jLabel2.setText(i+ "");
-            if(i == 10){
+            if(i >= 10){
                 System.out.println("Prueba");
                 jButton1.setVisible(true);
                 jButton1.setEnabled(true);
@@ -101,6 +101,15 @@ public class mainscreen extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        if(i >=10) {
+        i = i-10;
+        j = j+(0.1);
+        jLabel2.setText(i+ "");
+        }
+        else {
+            System.out.println("Porimas insuficientes");
+        }
+               
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
