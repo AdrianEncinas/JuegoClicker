@@ -20,6 +20,7 @@ public class mainscreen extends javax.swing.JPanel {
                         jLabel3.setText("Porimas");
                         jButton2.setText("¡Obtener Porimas!");
                         jButton1.setVisible(false);
+                        jButton1.setText("Mejorar colector");
                         
     }
 
@@ -46,7 +47,7 @@ public class mainscreen extends javax.swing.JPanel {
 
         jLabel3.setText("jLabel3");
 
-        jButton1.setText("jButton3");
+        jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -96,6 +97,10 @@ public class mainscreen extends javax.swing.JPanel {
                 System.out.println("Prueba");
                 jButton1.setVisible(true);
                 jButton1.setEnabled(true);
+            }
+            else {
+                jButton1.setVisible(false);
+                jButton1.setEnabled(false);
             }
     }//GEN-LAST:event_jButton2ActionPerformed
 
