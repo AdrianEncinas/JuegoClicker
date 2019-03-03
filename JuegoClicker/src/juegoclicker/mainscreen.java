@@ -108,8 +108,7 @@ public class mainscreen extends javax.swing.JPanel {
         }
         else {
             System.out.println("Porimas insuficientes");
-        }
-        prueba       
+        }     
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
