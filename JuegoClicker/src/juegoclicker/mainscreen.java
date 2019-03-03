@@ -2,13 +2,15 @@
 package juegoclicker;
 import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 
 public class mainscreen extends javax.swing.JPanel {
     JFrame newFrame = new JFrame();
     int i = 0;
     int j = 1;
     int costejB1 = 10;
-
+    private Font font = new Font("serief", Font.ITALIC, 18); 
     public mainscreen() {
         initComponents();
         newFrame.getContentPane().add(this, BorderLayout.CENTER);
@@ -19,6 +21,7 @@ public class mainscreen extends javax.swing.JPanel {
                         jLabel1.setText("Bienvenido a Pori Clicker.");
                         jLabel2.setText(i + "");
                         jLabel3.setText("Porimas");
+                        jButton2.setFont(font);
                         jButton2.setText("¡Obtener Porimas!");
                         jButton1.setVisible(false);
                         jButton1.setText("Mejorar colector: "+costejB1);
@@ -98,10 +101,12 @@ public class mainscreen extends javax.swing.JPanel {
                 System.out.println("Prueba");
                 jButton1.setVisible(true);
                 jButton1.setEnabled(true);
+                jButton1.setBackground(Color.green);
             }
             else {
-                jButton1.setVisible(false);
                 jButton1.setEnabled(false);
+                jButton1.setBackground(Color.gray);
+                jButton1.setFont(font);
             }
             jButton1.setText("Mejorar colector: "+costejB1);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -118,8 +123,8 @@ public class mainscreen extends javax.swing.JPanel {
             System.out.println("Porimas insuficientes");
         }
         if(i <costejB1) {
-            jButton1.setVisible(false);
             jButton1.setEnabled(false);
+            jButton1.setBackground(Color.gray);
         }
         jButton1.setText("Mejorar colector: "+costejB1);
     }//GEN-LAST:event_jButton1ActionPerformed
