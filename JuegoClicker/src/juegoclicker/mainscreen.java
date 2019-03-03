@@ -5,8 +5,8 @@ import java.awt.BorderLayout;
 
 public class mainscreen extends javax.swing.JPanel {
     JFrame newFrame = new JFrame();
-    double i = 0;
-    double j = 1;
+    int i = 0;
+    int j = 1;
 
     public mainscreen() {
         initComponents();
@@ -103,7 +103,7 @@ public class mainscreen extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(i >=10) {
         i = i-10;
-        j = j+(0.1);
+        j = j+1;
         jLabel2.setText(i+ "");
         }
         else {
