@@ -4,11 +4,13 @@ import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.TimerTask;
 
 public class mainscreen extends javax.swing.JPanel {
     JFrame newFrame = new JFrame();
     int i = 0;
-    int j = 1;
+    int y = 1;
+    java.util.Timer t = new java.util.Timer();
     int costejB1 = 10;
     private Font font = new Font("serief", Font.ITALIC, 18); 
     public mainscreen() {
@@ -95,7 +97,7 @@ public class mainscreen extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        i = i+j;
+        i++;
         jLabel2.setText(i+ "");
             if(i >= costejB1){
                 System.out.println("Prueba");
@@ -112,16 +114,23 @@ public class mainscreen extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if(i >=costejB1) {
-        i = i-10;
-        j = j+1;
-        costejB1 = costejB1 + 1;
-        jLabel2.setText(i+ "");
-        }
-        else {
+        
+        t.schedule(new TimerTask(){
+            @Override
+            public void run(){
+            i=i+y;
+            jLabel2.setText(i + "");
             System.out.println("Porimas insuficientes");
         }
+        }, 1000, 1000);/*
+        if(i >=costejB1) {
+            i = i-10;
+            costejB1 = costejB1 + 1;
+            jLabel2.setText(i + "");
+        }
+        /*else(i =! costejB1) {
+            System.out.println("Porimas insuficientes");
+        }*/
         if(i <costejB1) {
             jButton1.setEnabled(false);
             jButton1.setBackground(Color.gray);
@@ -129,6 +138,7 @@ public class mainscreen extends javax.swing.JPanel {
         jButton1.setText("Mejorar colector: "+costejB1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

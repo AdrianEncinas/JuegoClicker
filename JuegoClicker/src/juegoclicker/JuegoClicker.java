@@ -5,6 +5,9 @@
  */
 package juegoclicker;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+
 /**
  *
  * @author Terro
@@ -17,6 +20,7 @@ public class JuegoClicker {
     public static void main(String[] args) {
         // TODO code application logic here
         mainscreen  myscreen = new mainscreen();
+        
     }
     
 }
